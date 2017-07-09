@@ -1,0 +1,10 @@
+<p class="center"><%= link_to "Ceate new product", new_product_path, class: "btn btn-danger btn-lg" %></p>
+<% @products.each do |product| %>
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2 well">
+            <h4><%= link_to product.proname, product_path(product) %></h4>
+            <p><%= truncate(product.description, length:150) %></p>
+        </div>
+    </div>
+<% end %>
+
